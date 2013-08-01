@@ -7,7 +7,9 @@ class StringReplace
 
 	def initialize fileOpen
 		@fileIn = fileOpen
-		@fileOut = '../Convert/' + fileOpen
+		fileSplit = fileOpen.split('/')
+		puts fileSplit
+		@fileOut = "Convert/" + fileSplit[1]
 		readFile
 	end
 
